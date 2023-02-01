@@ -8,6 +8,7 @@ import authRoutes from "./routes/auth.js";
 import hotelRoutes from "./routes/hotels.js";
 import roomRoutes from "./routes/rooms.js";
 import userRoutes from "./routes/users.js";
+import cors from 'cors';
 
 const app = express();
 dotenv.config();
@@ -29,6 +30,13 @@ mongoose.connection.on("disconnected", () => {
 /***************** Middleware ************************************/
 app.use(express.json());
 app.use(cookieParser());
+
+const corsOptions ={
+    origin:'http://localhost:3000', 
+    credentials:true,
+    optionSuccessStatus:200
+}
+app.use(cors());
 
 /***************** Routers ************************************/
 app.use("/api/auth", authRoutes);

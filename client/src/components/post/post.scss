@@ -1,0 +1,128 @@
+@import "../../App.scss";
+
+article {
+    width: 100%;
+
+    .postWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 200px;
+        padding: 5px;
+        border: .5px solid lightgray;
+        border-radius: 10px;
+        
+
+        
+        .left{
+            flex: 1;
+            img {
+                width: 100%;
+                height: 180px;
+                object-fit:cover;
+                border-radius: 5px;
+
+            }
+        }
+
+        .middle{
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            h1 {
+                color: $blue;
+                font-size: 16px;
+            }
+
+            span {
+                color: black;
+                font-size: 10px;
+
+                &.free {
+                    background-color: darkgreen;
+                    color: white;
+                    width: fit-content;
+                    padding: 2px 4px;
+                    border-radius: 3px;
+                }
+
+                &.bold {
+                    font-weight: 700;
+                    color: black;
+                    margin: 10px 0;
+                }
+
+            }
+            .cancel {
+                color: green;
+
+                h2 {
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .right{
+            flex: 1;
+            height: 90%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .rating {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .span {
+                    font-weight: 700;
+                }
+                button {
+                    padding: 5px 10px;
+                    border: none;
+                    background-color: $blue;
+                    color: $white;
+                    font-weight: 600;
+                }
+            }
+
+            .price {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 10px;
+                width: 100%;
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+                span {
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $gray;
+                }
+
+                button {
+                    padding: 10px auto;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: $cyan;
+                    color: $white;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

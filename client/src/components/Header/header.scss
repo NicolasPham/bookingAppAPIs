@@ -1,0 +1,154 @@
+@import '../../App.scss';
+
+.header {
+    background-color: $blue;
+    color: $gray;
+    position: relative;
+
+
+    .headerList {
+        width: 100%;
+        max-width: 1024px;
+        margin: 20px 0 100px 0;
+        gap: 50px;
+        font-size: 20px;
+        cursor: pointer;
+
+        .headerItem {
+            gap: 10px;
+        }
+    }
+
+    .headerContent {
+        width: 100%;
+        max-width: 1024px;
+        padding-bottom: 5rem;
+
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.75rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: .5rem .75rem;
+            margin: 20px 0;
+            color: $gray;
+            background-color: $cyan;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    .headerSearch {
+        width: 100%;
+        max-width: 1024px;
+        background-color: $gray;
+        color: $blue;
+        position: absolute;
+        bottom: -25px;
+        border: 2px solid $cyan;
+        border-radius: 5px;
+        justify-content: space-between;
+
+        .searchItem {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            position: relative;
+
+            .icon {
+                color: $cyan;
+            }
+
+            input {
+                padding: 5px;
+                border: none;
+                outline: none;
+                border-bottom: 0.5px solid $cyan;
+                background-color: $gray;
+                font-size: 1.2rem;
+            }
+
+            span {
+                font-size: .8rem;
+                cursor: pointer;
+            }
+
+            button {
+                border: none;
+                padding: 5px 10px;
+                font-size: 1.2rem;
+                background-color: $cyan;
+                color: $white;
+                cursor: pointer;
+            }
+            
+            .options {
+                position: absolute;
+                top: 60px;
+                width: 200px;
+                background-color: $gray;
+                justify-content: flex-start;
+                box-shadow: 2px 2px 2px 2px $blue;
+                border-radius: 4px;
+                z-index: 10;
+                
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    
+                    span {
+                        flex: 2;
+                    }
+                    
+                    .adjust {
+                        display: flex;
+                        flex: 1;
+                        justify-content: flex-end;
+                        gap: 5px;
+                        align-items: center;
+                        
+                        button {
+                            width: content;
+                            height: 20px;
+                            padding: 2px 4px;
+                            display: flex;
+                            align-items: center;
+                            background-color: $cyan;
+                            color: $gray;
+                            
+                            &:disabled {
+                                cursor: not-allowed;
+                                background-color: darkgray;
+                                color: lightgray;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+            .date {
+                position: absolute;
+                width: 500px;
+                top: 70px;
+                left: 25%;
+                color: $white;
+                font-size: .8rem;
+                background-color: none;
+                z-index: 10;
+            }
+
+    }
+
+}

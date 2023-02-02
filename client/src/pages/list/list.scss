@@ -1,0 +1,129 @@
+@import "../../App.scss";
+
+.listContent  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+
+    .wrapper {
+        margin: 30px 0;
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        gap: 20px;
+
+        
+        .search {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: $cyan;
+            padding: 20px;
+            border-radius: 20px;
+            height: 55vh;
+
+
+            h1{
+                color: $white;
+                font-size: 25px;
+            }
+            .form {
+                margin: 10px 0;
+                position: relative;
+                
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    
+                    label {
+                        color: $white;
+                        font-size: 16px;
+                        margin: 10px 0 5px 0;
+                    }
+                    input {
+                        padding: 5px 10px;
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                        color: $cyan;
+                        outline: none;
+                        border: none;
+                        background-color: $gray;
+                        
+                        &::placeholder {
+                            color: $cyan;
+                        }
+                    }
+                    
+                    .date {
+                        background-color: $gray;
+                        color: $cyan;
+                        font-size: 14px;
+                        padding: 5px 10px;
+                    }
+                    
+                }
+
+                .options {
+                    margin-top: 20px;
+                    gap: 10px;
+
+                    .title {
+                    color: $white;
+                    font-size: 16px;
+                    margin: 10px 0 5px 0;
+                    }
+
+                    .option {
+                        display: flex;
+                        justify-content: space-between;
+
+
+                        label {
+                            font-size: 12px;
+                            color: $gray;
+
+
+                        }
+                        input {
+                            width: 40px;
+                            padding: 2px 5px;
+                            font-size: 12px;
+                            border: none;
+                            background-color: $white;
+                            color: $blue;
+                            outline: none;
+                            text-align: right;
+                        }
+                    }
+                }
+
+                button {
+                    width: 70%;
+                    padding: 5px 10px;
+                    background-color: $gray;
+                    color: $blue;
+                    border: none;
+                    border-radius: 10px;
+                    align-self: center;
+                    margin-top: 30px;
+                    cursor: pointer;
+                }
+            } // form
+        } //search
+
+        .result {
+            flex: 3;
+        }
+    } //wrapper
+}
+
+
+.calendar {
+    z-index: 2;
+    right: -300px;
+    background-color: $gray;
+    border-radius: 5px;
+    overflow: hidden;
+}

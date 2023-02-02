@@ -1,0 +1,102 @@
+@import "../../App.scss";
+
+.home {
+    width: 100%;
+    background-color: $white;
+
+    .list {
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+
+        article {
+            width: 300px;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .text {
+                position: absolute;
+                bottom: 20px;
+                left: 10px;
+                backdrop-filter: blur(5px);
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                h1 {
+                    font-size: 24px;
+                    color: $white;
+                }
+
+                h3 {
+                    color: $white;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+
+    .featuredContainer {
+
+        .guestLove {
+            width: 100%;
+            max-width: 1024px;
+            margin: 20px 0 40px 0;
+
+            h1 {
+                color: $blue;
+                margin: 10px 0;
+            }
+
+            .listItem {
+                display: flex;
+                gap: 30px;
+                width: 100%;
+
+                article {
+
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                        border-radius: 10px;
+                    }
+
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+
+                        h1 {
+                            margin: 0;
+                            font-size: 1.2rem;
+                        }
+
+                        span {
+                            font-size: 1rem;
+
+                            button {
+                                padding: 3px 6px;
+                                border: none;
+                                background-color: $cyan;
+                                color: $white;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        .price {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import "../../App.scss";
+
+.home {
+
+
+    .featuredContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .browser {
+            width: 100%;
+            max-width: 1024px;
+
+            h1 {
+                margin: 20px 0;
+                color: $blue;
+            }
+
+
+            .propList {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                gap: 20px;
+
+                article {
+                    width: 200px;
+                    // height: 100px;
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    img {
+                        width: 100%;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+
+                    .text {
+                        color: $blue;
+
+
+                        h1 {
+                            margin: 5px 0 0 0;
+                        }
+
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

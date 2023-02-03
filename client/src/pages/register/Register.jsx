@@ -1,8 +1,8 @@
 import "./register.scss"
-import axios from "axios";
 import { useContext, useState } from "react";
 import { AuthContext } from '../../context/AuthContext.js'
 import { Link, useNavigate } from 'react-router-dom';
+import { axiosIntance } from "../../../config";
 
 export const Register = () => {
 
@@ -24,7 +24,7 @@ export const Register = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('/auth/register', credential)
+            const res = await axiosIntance.post('/auth/register', credential)
             dispatch({type: "LOGIN_SUCCESS", payload: res.data})
             navigate('/')
         } catch (error) {

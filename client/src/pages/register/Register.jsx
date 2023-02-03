@@ -2,7 +2,7 @@ import "./register.scss"
 import { useContext, useState } from "react";
 import { AuthContext } from '../../context/AuthContext.js'
 import { Link, useNavigate } from 'react-router-dom';
-import { axiosIntance } from "../../../config";
+import { axiosIntance } from "../../config.js";
 
 export const Register = () => {
 

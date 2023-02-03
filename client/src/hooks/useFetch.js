@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { axiosIntance } from "../../config";
+import { axiosIntance } from "../config.js";
 
 export const useFetch = (url) => {
   const [data, setData] = useState([]);
